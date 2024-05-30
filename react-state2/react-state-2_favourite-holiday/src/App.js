@@ -8,9 +8,7 @@ export default function App() {
     event.preventDefault();
     setFavHoliday(event.target.elements.holiday.value);
     setFavDate(event.target.elements.date.value);
-    //event.target.reset();
-    setFavHoliday("");
-    setFavDate("");
+    event.target.reset();
     event.target.elements.holiday.focus();
   }
 
@@ -29,17 +27,9 @@ export default function App() {
           type="text"
           name="holiday"
           placeholder="e.g. Christmas"
-          value={favHoliday}
-          onChange={(event) => setFavHoliday(event.target.value)}
         />
         <label htmlFor="date">Date: </label>
-        <input
-          id="date"
-          type="date"
-          name="date"
-          value={favDate}
-          onChange={(event) => setFavDate(event.target.value)}
-        />
+        <input id="date" type="date" name="date" />
         <button type="submit" className="form__submit-button">
           Submit
         </button>
