@@ -5,6 +5,9 @@ import { volumes } from "@/lib/data";
 export default function Volumes() {
   return (
     <>
+      <head>
+        <title>Volumes</title>
+      </head>
       <h1>Lord of the rings</h1>
       <p>{introduction}</p>
       <h2>All Volumes</h2>

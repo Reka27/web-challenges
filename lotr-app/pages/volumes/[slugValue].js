@@ -17,6 +17,9 @@ export default function VolumeInfo() {
 
   return (
     <>
+      <head>
+        <title>{title}</title>
+      </head>
       <Link href="/volumes">All Volumes</Link>
       <h1>{title}</h1>
       <p>{description}</p>

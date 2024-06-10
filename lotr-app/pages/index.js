@@ -14,6 +14,9 @@ export default function HomePage() {
 
   return (
     <>
+      <head>
+        <title>Overview</title>
+      </head>
       <h1>Lord of the rings</h1>
       <Link href="/volumes">All Volumes</Link>
       <br />
