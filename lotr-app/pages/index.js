@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { volumes } from "@/lib/data";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 export default function HomePage() {
   const router = useRouter();
@@ -14,9 +15,9 @@ export default function HomePage() {
 
   return (
     <>
-      <head>
+      <Head>
         <title>Overview</title>
-      </head>
+      </Head>
       <h1>Lord of the rings</h1>
       <Link href="/volumes">All Volumes</Link>
       <br />

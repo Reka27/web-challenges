@@ -2,6 +2,7 @@ import { volumes } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 export default function VolumeInfo() {
   const router = useRouter();
@@ -17,9 +18,9 @@ export default function VolumeInfo() {
 
   return (
     <>
-      <head>
+      <Head>
         <title>{title}</title>
-      </head>
+      </Head>
       <Link href="/volumes">All Volumes</Link>
       <h1>{title}</h1>
       <p>{description}</p>
