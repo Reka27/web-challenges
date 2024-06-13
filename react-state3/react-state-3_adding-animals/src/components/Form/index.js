@@ -2,10 +2,6 @@ import { useState } from "react";
 import "./Form.css";
 
 export default function Form({ onAddAnimal }) {
-  const [inputValue, setInputValue] = useState("");
-  function handleInputChange(event) {
-    setInputValue(event.target.value);
-  }
   function handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -14,7 +10,6 @@ export default function Form({ onAddAnimal }) {
     onAddAnimal(data);
 
     event.target.reset();
-    setInputValue("");
     event.target.elements.name.focus();
   }
   const animalEmojis = [
@@ -126,8 +121,6 @@ export default function Form({ onAddAnimal }) {
             type="text"
             name="emoji"
             maxLength={3}
-            //value={inputValue}
-            onChange={handleInputChange}
             required
           />
           <datalist id="emojis">
